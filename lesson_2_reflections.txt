@@ -8,3 +8,7 @@ What value do you think it offers?**
 The repository is where we input the data at the end.
 The working directory is the local place where we do our work.
 The staging area is where we place the data we will want to commit next in our repository. It gives you the ability to choose exacty what you will want to commit next.
+
+**How can you use the staging area to make sure you have one commit per logical change?**
+
+You do all your changes and perhaps more. Then you would select the changes which have the same logic behinf with git add. They are now on staging. You commit what is now in staging with git commit and you add a message explaining this logical change.

@@ -1,0 +1,64 @@
+Framer reflections
+
+Lesson 1: Introduction to Framer Studio
+	In snippets, plenty of useful things!
+	Create a background with new BackgroundLayer
+
+	States gives the possibility to give several properties to a layer: square.states.add
+	On Event.Click, -> you then put sqaure.states.next()
+Lesson 2: Facebook Groups Prototype - https://youtu.be/3zaxrXK7Nac
+	To put an image, don't hesitate to create a new Layer, specifie width and height and include the image, image: "image/home.png"
+
+	superlayer are really useful to put a layer under another. Easy to setup in properties of a new layer
+Lesson 3: iMessage Prototype - https://youtu.be/BTo-geWnfsc
+	Animate is super easy: sketch.indicator.animate, then you put properties and characteristics
+	To repeat an animation, in properties, you can use repeat, but also time and delay in order to tweak it
+
+	Layer.on Events. in order to listen to an event
+
+	Utils are there to help in stuff. Utils.delay launch code after a delay setup for example
+Lesson 4: Photo Feed Prototype - https://youtu.be/kJYI4oYrHik
+
+	Super easy to create a scroll component, you only need to put your content in a new scroll element, exemple: scroll = ScrollComponent.wrap(sketch.content)
+
+	Additional useful options, .scrollHorizontal
+	Prevent horizontal scroll: scroll.scrollHorizontal = false
+
+	For padding .contentInset = {bottom:32} for example
+
+	Loops are cool. Too create loops, you must first create an array with your elements:
+	Example: images = [sketch.img1, sketch.img2, sketch.img3, sketch.img4]
+	Then a simple for image in images, tada!
+
+	You can have round images, with .borderRadius
+
+	Create events is super easy: image.on Events.Click, (event, layer) ->
+	Event, layer is because I'm verbose. Hmm. 
+
+	Copy an existing layer with .copy
+
+	Put something behind something else: .placeBehind(sketch.navBar)
+	Position something at the same place than something else: currentImage.frame = layer.screenFrame
+
+	Prevent something to happen on condition: if not scroll.isMoving
+
+	Hide something: layer.visible = false
+
+	Animate something to fill the page and go middle, super easy:
+	currentImage.animate
+		properties:
+			scale: Screen.width / currentImage.width
+			midY: Screen.height / 2
+
+	Add to your animation a speed: "spring (200,20,0)"
+
+	Start something at the end of an animation: this.on Events.AnimationEnd
+Lesson 5: iOS Lockscreen Prototype - https://youtu.be/zmnrWAfDswQ
+
+	The page component is fantastic to make sliding screens, pager = new PageComponent
+	To add a page .addPage(nameofthepage)
+	Specify beginning page: .snapToPage(nameofthepage, false)
+
+	Retrieve the width and size of the screen (or an existing layer is easy): Screen.width, Screen.height
+
+	To create nice motion easily with multiple elements, Utils are great. You set them ip with page.content.on "change:x", -> (or anything else y, scroll etc.) then you can apply series of effects which are going to be relative to each other, example: bg.blur = Utils.modulate(this.x, [-750,0], [0,20], true)

@@ -17,3 +17,6 @@ You do all your changes and perhaps more. Then you would select the changes whic
 
 Branches are useful for experimentations without hindering the main development track.
 
+**How do the diagrams help you visualize the branch structure?**
+
+Diagrams accessible with git log --graph --online gives me the ability to quickly vizualize the changes chronologically over multiple branches.  This way I know when a branch wa created and how much changes occured in the master branches - or other branches - since its creation.

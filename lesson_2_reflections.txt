@@ -1,0 +1,10 @@
+**What happens when you initialize a repository? Why do you need to do it?**
+
+A .git file is created in the directory. It's hided so to reveal it, you need to ls -a. We need to do it to tell the system that a git repository exist here and save the metadata linked.
+
+**How is the staging area different from the working directory and the repository?
+What value do you think it offers?**
+
+The repository is where we input the data at the end.
+The working directory is the local place where we do our work.
+The staging area is where we place the data we will want to commit next in our repository. It gives you the ability to choose exacty what you will want to commit next.

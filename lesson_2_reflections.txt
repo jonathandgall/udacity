@@ -20,3 +20,12 @@ Branches are useful for experimentations without hindering the main development 
 **How do the diagrams help you visualize the branch structure?**
 
 Diagrams accessible with git log --graph --online gives me the ability to quickly vizualize the changes chronologically over multiple branches.  This way I know when a branch wa created and how much changes occured in the master branches - or other branches - since its creation.
+
+**What is the result of merging two branches together? Why do we represent it in the diagram the way we do?**
+
+Merging enables us to reconciles the work make by different people or the same person with different objectives on the same main branch. We represent it the way we do on the diagram to see the difference in evolution in the work of those different individual/features before the merge.
+
+**What are the pros and cons of Git’s automatic merging vs. always doing merges manually?**
+ 
+ Pros: Automatic commiting saves time, it's reliable
+ Con: Lose flexibility, might miss issues

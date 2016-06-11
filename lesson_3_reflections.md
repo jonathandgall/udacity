@@ -20,4 +20,8 @@
 * We would need to share a log of all the changes using another way, Excel file, mails
 * It would be much more difficult to synchronize without a dedicated platform
 
+**When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?**
+* If you know want to test a functionnality or fix a bug
+* Update to master makes delivering to production straightforward but prevents to have flexibility in your code practices
+
 

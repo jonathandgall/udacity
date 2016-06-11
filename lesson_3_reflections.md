@@ -16,4 +16,8 @@
 **What is the benefit of having a copy of the last known state of the remote stored locally?**
 * it gives you the ability to see all the changes that have occured since the last time you commit and readjust if necessary
 
+**How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?**
+* We would need to share a log of all the changes using another way, Excel file, mails
+* It would be much more difficult to synchronize without a dedicated platform
+
 

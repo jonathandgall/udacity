@@ -13,4 +13,7 @@
 * Branches enables you to create additional parallels version of your code base
 * I would you fork to retrieve a repo from GitHub, clone to put it on my direcoty and branches to experiment on it before changing it.
 
+**What is the benefit of having a copy of the last known state of the remote stored locally?**
+* it gives you the ability to see all the changes that have occured since the last time you commit and readjust if necessary
+
 

@@ -1,0 +1,15 @@
+HTMLGuidelines
+
+HTML - Element and attribute names should all be lowercase. (See: Capitalization.)
+HTML - Use HTML5. (See: HTML Style Rules-Document Type.)
+HTML - Use UTF-8 as character encoding. (See: General Meta Rules-Encoding.)
+HTML - Place all block/list/table elements on a separate line and indent child elements. (See: HTML-General Formatting.)
+HTML - Use semantic tags. (See: HTML Style Rules-Semantics.)
+HTML - Provide alternate content for multimedia. (See: HTML Style Rules-Multimedia Fallback.)
+HTML - Remove trailing white spaces from code. (See: HTML - General Formatting Rules - Trailing Whitespace.)
+HTML - Use consistent indentation (tabs or spaces) (See HTML - General Formatting Rules - Indentation)
+HTML - Use comments to explain the code. (See: General Meta Rules-Comments.)
+HTML - Mark action items with TODO. (See: General Meta Rules-Action Items.)
+HTML - Remove entity references. (See: HTML Style Rules-Entity References.)
+HTML - Remove type attribute from link and script elements. (See: HTML Style Rules-Type Attributes.)
+HTML - Use double rather than single quotation marks for attribute values. (See: HTML-HTML Quotation Marks.)

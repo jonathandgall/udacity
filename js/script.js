@@ -37,7 +37,9 @@ function loadData() {
         for (var i = 0; i <= items.length - 1; i++) {
             $nytElem.append(items[i]);
         }
-    });
+    }).fail((function() {
+        $nytHeaderElem.text('New York Times Articles Could Not Be Loaded');;
+    }));
 
     return false;
 };

@@ -2,7 +2,7 @@
 body {background-color: #CCC;}
 
 .catimg {
-    border: 10px solid;
+    border: 1px solid;
     border-color: green;
     border-radius: 4%;
 }

@@ -8,5 +8,10 @@ body {background-color: #CCC;}
 }
 
 .numberclicks {
-    background-color: DodgerBlue;
+    color: DodgerBlue;
+}
+
+.catname {
+    font-weight: bold;
+    font-size: 2rem;
 }

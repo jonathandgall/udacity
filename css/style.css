@@ -1,5 +1,11 @@
-* {box-sizing:border-box;}
-body {background-color: #CCC;}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #CCC;
+}
 
 .catimg {
     border: 1px solid;
@@ -14,4 +20,28 @@ body {background-color: #CCC;}
 .catname {
     font-weight: bold;
     font-size: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.catMenu {
+    color: purple;
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.blue {
+    color: blue;
+}
+
+.highlight {
+    background: yellow;
 }

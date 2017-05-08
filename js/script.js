@@ -1,69 +1,84 @@
 function loadData() {
 
-    var $article = $('article');
-    var $catimg = $('.catimg');
     var $catname = $('.catname');
-    var $numberclicks = $('.numberclicks');
-    var $container = $('#container');
     var $catlist = $('#catlist');
     var $catpic = $('#catpic');
 
-    var cats = [{
-        "name": "Kiaousse",
-        "url": "./img/cat1.jpeg",
-        "clk": 0,
-        "hided": 1
-    }, {
-        "name": "Miagel",
-        "url": "./img/cat2.jpeg",
-        "clk": 0,
-        "hided": 1
-    }, {
-        "name": "Karambrousse",
-        "url": "./img/cat3.jpeg",
-        "clk": 0,
-        "hided": 1
-    }, {
-        "name": "Miaousse",
-        "url": "./img/cat4.jpeg",
-        "clk": 0,
-        "hided": 1
-    }, {
-        "name": "Minaude",
-        "url": "./img/cat5.jpeg",
-        "clk": 0,
-        "hided": 1
-    }];
+
+    var model = {
+        cats: [{
+            "name": "Kiaousse",
+            "url": "./img/cat1.jpeg",
+            "clk": 0,
+            "hided": 1
+        }, {
+            "name": "Miagel",
+            "url": "./img/cat2.jpeg",
+            "clk": 0,
+            "hided": 1
+        }, {
+            "name": "Karambrousse",
+            "url": "./img/cat3.jpeg",
+            "clk": 0,
+            "hided": 1
+        }, {
+            "name": "Miaousse",
+            "url": "./img/cat4.jpeg",
+            "clk": 0,
+            "hided": 1
+        }, {
+            "name": "Minaude",
+            "url": "./img/cat5.jpeg",
+            "clk": 0,
+            "hided": 1
+        }]
+    }
 
 
-    for (var i = 0; i <= cats.length - 1; i++) {
-        $catlist.append('<div class="catMenu catList' + i + '">' + cats[i].name + '</div>');
-        $catpic.append('<div class="catname hide cat' + i + '">' + cats[i].name + '</div>' + '<img  width="400px" class="catimg hide" id="img' + i + '" src="' + cats[i].url + '"><p class="hide cat' + i + '">Number of clicks: <span id="nbclicks' + i + '">' + cats[i].clk + '</span></p>');
-    };
+    var octopus = {
+        createCallback: function(i) {
+            return function() {
+                model.cats[i].clk++;
+                $('#nbclicks' + i).text(model.cats[i].clk);
+            }
+        },
 
-    function createCallback(i) {
-        return function() {
-            cats[i].clk++;
-            $('#nbclicks' + i).text(cats[i].clk);
-        }
-    };
+        toggleFromCatList: function() {
+            for (var i = 0; i <= model.cats.length; i++) {
+                $('.catList' + i).click(octopus.toggle(i));
+            };
+        },
 
-    for (var i = 0; i <= cats.length; i++) {
-        $('.catList' + i).click(hide(i));
-    };
+        showImage: function() {
+            for (var i = 0; i <= model.cats.length; i++) {
+                $('#img' + i).click(octopus.createCallback(i));
+            };
+        },
 
-    for (var i = 0; i <= cats.length; i++) {
-        $('#img' + i).click(createCallback(i));
-    };
+        toggle: function(i) {
+            return function() {
+                $('#img' + i).toggleClass("hide");
+                $('.cat' + i).toggleClass("hide");
+            }
+        },
+        init: function() {
+            view.init();
+            octopus.showImage();
+            octopus.toggleFromCatList();
 
-    function hide(i) {
-        return function() {
-            $('#img' + i).toggleClass("hide");
-            $('.cat' + i).toggleClass("hide");
         }
     }
 
-    return false;
+    var view = {
+        init: function() {
+            for (var i = 0; i <= model.cats.length - 1; i++) {
+                $catlist.append('<div class="catMenu catList' + i + '">' + model.cats[i].name + '</div>');
+                $catpic.append('<div class="catname hide cat' + i + '">' + model.cats[i].name + '</div>' + '<img  width="400px" class="catimg hide" id="img' + i + '" src="' + model.cats[i].url + '"><p class="hide cat' + i + '">Number of clicks: <span id="nbclicks' + i + '">' + model.cats[i].clk + '</span></p>');
+            };
+        }
+    }
+
+    octopus.init();
 };
 
 loadData();

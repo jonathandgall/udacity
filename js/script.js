@@ -65,6 +65,12 @@ function loadData() {
                 $('.cat' + i).show();
             }
         },
+
+        getCats: function() {
+            return model.cats;
+        },
+
+
         init: function() {
             view.init();
             octopus.showImage();
@@ -75,9 +81,9 @@ function loadData() {
 
     var view = {
         init: function() {
-            for (var i = 0; i <= model.cats.length - 1; i++) {
-                $catlist.append('<div class="catMenu catList' + i + '">' + model.cats[i].name + '</div>');
-                $catpic.append('<div class="catname hide cat' + i + '">' + model.cats[i].name + '</div>' + '<img  width="400px" class="catimg hide" id="img' + i + '" src="' + model.cats[i].url + '"><p class="hide cat' + i + '">Number of clicks: <span id="nbclicks' + i + '">' + model.cats[i].clk + '</span></p>');
+            for (var i = 0; i <= octopus.getCats().length - 1; i++) {
+                $catlist.append('<div class="catMenu catList' + i + '">' + octopus.getCats()[i].name + '</div>');
+                $catpic.append('<div class="catname hide cat' + i + '">' + octopus.getCats()[i].name + '</div>' + '<img  width="400px" class="catimg hide" id="img' + i + '" src="' + octopus.getCats()[i].url + '"><p class="hide cat' + i + '">Number of clicks: <span id="nbclicks' + i + '">' + octopus.getCats()[i].clk + '</span></p>');
             };
         }
     }

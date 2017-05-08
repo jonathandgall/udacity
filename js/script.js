@@ -57,8 +57,12 @@ function loadData() {
 
         toggle: function(i) {
             return function() {
-                $('#img' + i).toggleClass("hide");
-                $('.cat' + i).toggleClass("hide");
+                for (var y = 0; y <= model.cats.length; y++) {
+                    $('#img' + y).hide();
+                    $('.cat' + y).hide();
+                };
+                $('#img' + i).show();
+                $('.cat' + i).show();
             }
         },
         init: function() {

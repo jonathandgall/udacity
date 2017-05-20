@@ -1,0 +1,52 @@
+body {
+    font-family: 'Lato', serif;
+    background-color: #e5e1e6;
+}
+
+img {
+    border-radius: 25px;
+}
+
+.centerimg {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.filledcontainer {
+    display: flex;
+}
+
+.filleditem {
+    flex: 1;
+    flex-grow: 1;
+}
+
+.filleditem img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+p {
+    margin-bottom: 0rem;
+}
+
+.m-b-sm {
+    margin-bottom: 10px;
+}
+
+.m-b-xs {
+    margin-bottom: 5px;
+}
+
+.txt_center {
+    text-align: center;
+}
+
+menu {
+    color: red;
+}
+
+navigation {
+    background-color: #333 /* darkgrey */;
+}

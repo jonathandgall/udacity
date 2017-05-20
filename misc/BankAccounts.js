@@ -17,8 +17,8 @@ var savingsAccount = {
         }
     },
     // your code goes here
-    printAccountSummary = function(){
-        console.log("Welcome!"+"\n"+"Your balance is currently $"+balance.toFixed(0)+" and your interest rate is "interestRatePercent.toFixed(0)+"%.")
+    printAccountSummary: function() {
+        return ("Welcome!" + "\n" + "Your balance is currently $" + savingsAccount.balance.toFixed(0) + " and your interest rate is " + savingsAccount.interestRatePercent.toFixed(0) + "%.")
     }
 };
 

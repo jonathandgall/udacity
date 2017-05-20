@@ -9,16 +9,18 @@ facebookProfile = {
 	friends: 0,
 	messages: [],
 	postMessage : function(message) {
-		messages.push("New message");
+		facebookProfile.messages.push(message);
 	},
 	deleteMessage : function(index) {
-		messages.splice(index,1);
+		facebookProfile.messages.splice(index,1);
 	},
 	addFriend: function() {
-		return friends += 1;
+		return facebookProfile.friends += 1;
 	},
 	removeFriend: function() {
-		return friends -= 1;
+		return facebookProfile.friends -= 1;
 	}
+};
 
-}
+facebookProfile.postMessage("Hello");
+console.log(facebookProfile.messages)

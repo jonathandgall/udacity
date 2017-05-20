@@ -14,4 +14,13 @@ var umbrella = {
         }
     },
     // your code goes here
+    close: function() {
+        if (umbrella.isOpen === true) {
+            umbrella.isOpen =  false;
+            return "Julia closes the umbrella";
+        } else {
+            return "The umbrella is already closed!"
+        }
+    }
 };
+

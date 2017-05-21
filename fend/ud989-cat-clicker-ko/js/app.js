@@ -74,6 +74,7 @@ var ViewModel = function() {
     this.currentCat = ko.observable(this.catList()[0]);
 
     this.setCurrentCat = function(clickedCat) {
+    	//self because I want to access the viewmodel where the current cat lives
         self.currentCat(clickedCat);
     };
 

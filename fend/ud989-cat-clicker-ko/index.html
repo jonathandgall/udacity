@@ -9,6 +9,7 @@
 <body>
     <ul data-bind="foreach: catList">
         <li><span data-bind="text: name, click: $parent.setCurrentCat"></span>
+        <!-- We change the whole object with a click -->
     </ul>
     <div data-bind="with: currentCat()">
 

@@ -23,7 +23,8 @@ var app = app || {};
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
-			'blur .edit': 'close'
+			'blur .edit': 'close',
+			'click .priority-btn': 'priority'
 		},
 
 		// The TodoView listens for changes to its model, re-rendering. Since
@@ -64,6 +65,11 @@ var app = app || {};
 			return this.model.get('completed') ?
 				app.TodoFilter === 'active' :
 				app.TodoFilter === 'completed';
+		},
+
+		// Put the line with the priority class
+		priority: function () {
+			this.$el.addClass('priority');
 		},
 
 		// Toggle the `"completed"` state of the model.

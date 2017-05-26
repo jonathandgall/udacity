@@ -35,7 +35,15 @@ API Course, Lesson 1 -->
             },
             zoom: 13
         });
-
+        var tribeca = {
+            lat: 40.719526,
+            lng: -74.0089934
+        };
+        var marker = new google.maps.Marker({
+            position: tribeca,
+            map: map,
+            title: 'First Marker!'
+        });
     }
     </script>
     <!--TODO: Load the JS API ASYNCHRONOUSLY below.-->

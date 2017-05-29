@@ -43,7 +43,7 @@ API Course, Lesson 1 -->
         var marker = new google.maps.Marker({
                 map: map,
                 position: singleLatLng,
-                title: "my marker"
+                title: "Google Maps Marker"
             })
             // TODO: create a single infowindow, with your own content.
             // It must appear on the marker
@@ -54,7 +54,9 @@ API Course, Lesson 1 -->
 
         // TODO: create an EVENT LISTENER so that the infowindow opens when
         // the marker is clicked!
-        marker.addListener('click',function () {infowindow.open(map, marker)}) ;
+        marker.addListener('click', function() {
+            infowindow.open(map, marker)
+        });
     }
     </script>
     <!--TODO: Insert your API Key in the below call to load the API.-->

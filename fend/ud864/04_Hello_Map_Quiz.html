@@ -8,7 +8,7 @@
         margin: 0;
         padding: 0;
     }
-    
+
     #map {
         height: 100%;
         bottom: 0px;
@@ -16,7 +16,7 @@
         position: absolute;
         right: 0px;
     }
-    
+
     .options-box {
         background: #fff;
         border: 1px solid #999;
@@ -139,11 +139,12 @@
             }
 
         }
-                    function hideListings() {
-                for (var i = 0; i < locations.length; i++) {
-                    markers[i].setMap(null);
-                }
+
+        function hideListings() {
+            for (var i = 0; i < locations.length; i++) {
+                markers[i].setMap(null);
             }
+        }
     }
     </script>
     <!--TODO: Load the JS API ASYNCHRONOUSLY below.-->

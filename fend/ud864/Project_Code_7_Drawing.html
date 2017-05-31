@@ -403,10 +403,8 @@
                 markers[i].setMap(null);
             }
         }
-        var nyc = new google.maps.LatLng(40.715, -74.002);
-        var london = new google.maps.LatLng(51.506, -0.119);
-        var rio = new google.maps.LatLng(-22.916, -43.251);
-        var area = google.maps.geometry.spherical.computeArea([nyc, london, rio]);
+        
+        var area = google.maps.geometry.spherical.computeArea(polygon.getPath());
         console.log(area);
 
     }

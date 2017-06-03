@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas Exercise</title>
+</head>
+
+<body>
+    <div id="image-container">
+        <canvas width="400" height="400"></canvas>
+        <div>
+            <input type="file" id="file" />
+        </div>
+    </div>
+    <script>
+    var canvas = document.querySelector("canvas");
+        var ctx = canvas.getContext("2d")
+
+    $("#file").change(function(e) {
+        var URL = window.webkitURL || window.URL;
+        var url = URL.createObjectURL(e.target.files[0]);
+        var img = new Image();
+        img.src = url;
+
+        img.onload = function() {
+            img_width = img.width;
+            img_height = img.height;
+
+            c.drawImage(img, 0, 0, img_width, img_height);
+        }
+    });
+    </script>
+</body>
+
+</html>

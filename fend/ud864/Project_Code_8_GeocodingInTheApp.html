@@ -98,6 +98,7 @@
           <input id="zoom-to-area-text" type="text" placeholder="Enter your favorite area!">
           <input id="zoom-to-area" type="button" value="Zoom">
         </div>
+        <div id="placeArea"></div>
       </div>
       <div id="map"></div>
     </div>
@@ -407,6 +408,8 @@
               if (status == google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
                 map.setZoom(15);
+                document.getElementById('zoom-to-area-text').value = results[0].formatted_address;
+                
               } else {
                 window.alert('We could not find that location - try entering a more' +
                     ' specific place.');

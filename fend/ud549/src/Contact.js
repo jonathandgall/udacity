@@ -1,3 +1,3 @@
-function Contact() {
-
+function Contact(name) {
+    return 0;
 };

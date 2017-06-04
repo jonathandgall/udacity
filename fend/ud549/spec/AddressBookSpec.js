@@ -1,4 +1,4 @@
-decribe('Address Book', function(){
+describe('Address Book', function(){
 	it('should be able to find a contact',function() {
 	var addressBook = new AddressBook(),
 		thisContact = new Contact();

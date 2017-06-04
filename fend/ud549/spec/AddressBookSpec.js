@@ -19,3 +19,13 @@ describe('Address Book', function() {
         expect(addressBook.getContact(0)).not.toBeDefined();
     })
 });
+
+
+describe('Async Address Book', function() {
+    it('should grab initial contacts', function() {
+        var addressBook = new AddressBook();
+
+        addressBook.getInitialContacts();
+        expect(addressBook.intialComplete).toBe(true);
+    })
+})

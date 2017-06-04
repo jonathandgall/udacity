@@ -1,3 +1,3 @@
 function Contact(name) {
-    return 0;
+    return name;
 };
